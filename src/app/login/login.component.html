@@ -1,0 +1,23 @@
+<div id="login">
+<mat-card>
+  <mat-card-title>Zaloguj się!</mat-card-title>
+  <mat-card-content>
+    <br>
+    <form (ngSubmit)="loginUser()">
+      <mat-form-field appearance="outline">
+        <mat-label>Login</mat-label>
+        <input matInput [(ngModel)]="login" name="login">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Hasło</mat-label>
+        <input matInput [(ngModel)]="password" type=password name="password">
+      </mat-form-field>
+      <br>
+      <button mat-raised-button type="submit">Zaloguj</button>
+    </form>
+  </mat-card-content>
+  <mat-card-footer>&nbsp; Jeżeli nie masz jeszcze konta, <a routerLink="/register"> zarejestruj się!</a><br>
+    Przejdź do <a routerLink="/homepage">strony głównej!</a></mat-card-footer>
+</mat-card>
+</div>

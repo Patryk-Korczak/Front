@@ -3,14 +3,36 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { RegisterComponent } from './register/register.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomepageComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

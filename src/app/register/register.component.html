@@ -1,0 +1,70 @@
+<div id="register">
+  <mat-card>
+    <mat-card-title>Zarejestruj się!</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="registerUser(login, password, email, repeatPassword, name, postalNumber, cityName, streetName, homeNumber, surname)">
+        <div id="basic">
+          <br>
+          <h3>Dane podstawowe</h3>
+        <mat-form-field appearance="outline">
+          <mat-label>Login</mat-label>
+          <input matInput [(ngModel)]="login" name="login">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="email" name="email" type="email">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Hasło</mat-label>
+          <input matInput [(ngModel)]="password" type=password name="password">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Powtórz hasło</mat-label>
+          <input matInput [(ngModel)]="repeatPassword" type=password name="repeatPassword">
+        </mat-form-field>
+      </div>
+      <div id="extra">
+        <br>
+        <h3>Dane dodatkowe</h3>
+        <mat-form-field appearance="outline">
+          <mat-label>Imię</mat-label>
+          <input matInput [(ngModel)]="name" name="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Nazwisko</mat-label>
+          <input matInput [(ngModel)]="surname" name="surname">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Numer domu/mieszkania</mat-label>
+          <input matInput [(ngModel)]="homeNumber" name="homeNumber">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Ulica</mat-label>
+          <input matInput [(ngModel)]="streetName" name="streetName">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Miejscowość</mat-label>
+          <input matInput [(ngModel)]="cityName" name="cityName">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Kod pocztowy</mat-label>
+          <input matInput [(ngModel)]="postalNumber" name="postalNumber">
+        </mat-form-field>
+        <br>
+      </div>
+        <button mat-raised-button type="submit">Zarejestruj</button>
+      </form>
+    </mat-card-content>
+    <mat-card-footer>&nbsp; Jeżeli masz już konto, <a routerLink="/login"> zaloguj się!</a> &nbsp; </mat-card-footer>
+  </mat-card>
+
+</div>
+
