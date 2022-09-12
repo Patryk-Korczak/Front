@@ -14,6 +14,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import { RegisterComponent } from './register/register.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from "@angular/common/http";
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -22,18 +24,20 @@ import {HttpClientModule} from "@angular/common/http";
     LoginComponent,
     RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatGridListModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatGridListModule,
+        HttpClientModule,
+        MatIconModule,
+        MatMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,16 @@
-<mat-toolbar>
-  <span>Portal aukcyjny</span>
-  <button mat-icon-button><a routerLink="/homepage">home</a> </button>
-  <p>Zalogowany jako: </p>
+<mat-toolbar class="topbar" color="primary" *ngIf="isLoginOrRegisterPage()">
+  <span class="site-title">Portal Aukcyjny</span>
+</mat-toolbar>
+<mat-toolbar class="topbar" color="primary" *ngIf="!isLoginOrRegisterPage()">
+  <span class="site-title">Portal Aukcyjny</span>
+  <button mat-icon-button aria-label="Ikona strony głównej"><a routerLink="/homepage"><mat-icon style="color: white; vertical-align: middle;">home</mat-icon></a> </button>
+  <button mat-icon-button aria-label="Ikona menu użytkownika" [mat-menu-trigger-for]="userMenu"><mat-icon style="color: white; vertical-align: middle;">settings</mat-icon> </button>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item> Portfel</button>
+    <button mat-menu-item> Moje aukcje</button>
+    <button mat-menu-item> Ustawienia konta</button>
+    <button mat-menu-item> Wyloguj</button>
+  </mat-menu>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
